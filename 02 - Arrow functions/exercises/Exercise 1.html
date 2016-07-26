@@ -43,6 +43,12 @@
 
   // 🔥 This can also be done in a single .reduce(), but we're practicing arrow functions here, so chain them!
 
+  const total = Array.from(document.getElementsByTagName('li'))
+    .filter(i => i.innerText.toLowerCase().includes('flexbox'))
+    .map(i => i.getAttribute('data-time'))
+    .map(s => 60 * (parts = s.split(':'))[0] + Number(parts[1]))
+    .reduce((p, c) => p + c);
+  console.log(total);
 </script>
 </body>
 </html>
