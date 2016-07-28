@@ -30,7 +30,8 @@
   <h2 class="jump">SPREADS!</h2>
 
 <script>
-  
+  const $headline = document.querySelector('.jump');
+  $headline.innerHTML = [...$headline.innerText].map(e => `<span>${e}</span>`).join('');
 </script>
 </body>
 </html>
